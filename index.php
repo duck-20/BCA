@@ -26,8 +26,9 @@ include ('./includes/connect.php');
         <nav class="navbar navbar-expand-lg bg-info">
   <div class="container-fluid">
     <img src="./img/brand-logo.png" class="logo" alt="brand-logo">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -38,13 +39,13 @@ include ('./includes/connect.php');
           <a class="nav-link" href="#">Products</a>
         </li>
         <!-- dropdown -->
-        <li class="nav-item">
+        <li class="nav-item dropdown">
         <div class="dropdown show">
-        <a class="btn dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         categories
         </a>
         <!-- items to display in meny -->
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <div class='dropdown-menu' aria-labelledby='navbarDropMenuLink'>
         <?php
             $select_category="select * from `categories`";
             $result_category=mysqli_query($con,$select_category);
@@ -52,14 +53,18 @@ include ('./includes/connect.php');
               $category_title=$row_data['category_title'];
               $category_id=$row_data['category_id'];
               echo "
+              
               <a href='index.php?categories=$category_id' class='dropdown-item text-capitalize'>$category_title</a>
+              
               ";
+              
             }
           ?>
           </div>
-        </div>
+  
+</div>
 </li>
-        <!-- dropdown end -->
+      <!-- dropdown  -->
         <li class="nav-item">
           <a class="nav-link" href="#">Contact</a>
         </li>
