@@ -1,3 +1,8 @@
+<!-- Connection -->
+<?php
+include ('./includes/connect.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -74,18 +79,20 @@
           <li class="nav-item bg-info">
             <a href="#" class="nav-link text-light"><h5>Categories</h5></a>
           </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link text-light">Clothes</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link text-light">Accessories</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link text-light">Books</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link text-light">Keychains</a>
-          </li>
+          <!-- Showing inserted categories -->
+          <?php
+            $select_category="select * from `categories`";
+            $result_category=mysqli_query($con,$select_category);
+            while($row_data=mysqli_fetch_assoc($result_category)){
+              $category_title=$row_data['category_title'];
+              $category_id=$row_data['category_id'];
+              echo "
+              <li class='nav-item'>
+              <a href='#' class='nav-link text-light'>$category_title</a>
+            </li>
+              ";
+            }
+          ?>
         </ul>
     </div>
     <!-- Products -->
@@ -132,111 +139,7 @@
 
 <!-- last child -->
   <!-- Remove the container if you want to extend the Footer to full width. -->
-<div class="container mt-2 p-0">
-  <!-- Footer -->
-  <footer
-          class="text-center text-lg-start text-white bg-info"
-          >
-    <!-- Grid container -->
-    <div class="container p-4 pb-0">
-      <!-- Section: Links -->
-      <section class="">
-        <!--Grid row-->
-        <div class="row">
-          <!-- Grid column -->
-          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-            <h6 class="text-uppercase mb-4 font-weight-bold">
-              AR Store
-            </h6>
-            <p>
-               “I am the creature who stands above all” – Escanor
-            </p>
-          </div>
-          <!-- Grid column -->
 
-          <hr class="w-100 clearfix d-md-none" />
-
-          <!-- Grid column -->
-          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-            <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
-            <p>
-              <a class="text-white">Clothes</a>
-            </p>
-            <p>
-              <a class="text-white">Accessories</a>
-            </p>
-            <p>
-              <a class="text-white">Books</a>
-            </p>
-            <p>
-              <a class="text-white">KeyChains</a>
-            </p>
-          </div>
-          <!-- Grid column -->
-
-          <hr class="w-100 clearfix d-md-none" />
-
-          <!-- Grid column -->
-          <hr class="w-100 clearfix d-md-none" />
-
-          <!-- Grid column -->
-          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-            <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
-            <p><i class="fas fa-home mr-3"></i> Boudha,Kathmandu</p>
-            <p><i class="fas fa-envelope mr-3"></i> arstore@gmail.com</p>
-            <p><i class="fas fa-phone mr-3"></i> + 01 234 567 89</p>
-          </div>
-          <!-- Grid column -->
-
-          <!-- Grid column -->
-          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-            <h6 class="text-uppercase mb-4 font-weight-bold">Follow us</h6>
-
-            <!-- Facebook -->
-            <a
-               class="btn btn-primary btn-floating m-1"
-               style="background-color: #3b5998"
-               href="#!"
-               role="button"
-               ><i class="fab fa-facebook-f"></i
-              ></a>
-            <!-- Instagram -->
-            <a
-               class="btn btn-primary btn-floating m-1"
-               style="background-color: #ac2bac"
-               href="#!"
-               role="button"
-               ><i class="fab fa-instagram"></i
-              ></a>
-            <!-- Github -->
-            <a
-               class="btn btn-primary btn-floating m-1"
-               style="background-color: #333333"
-               href="#!"
-               role="button"
-               ><i class="fab fa-github"></i
-              ></a>
-          </div>
-        </div>
-        <!--Grid row-->
-      </section>
-      <!-- Section: Links -->
-    </div>
-    <!-- Grid container -->
-
-    <!-- Copyright -->
-    <div
-         class="text-center p-3"
-         style="background-color: rgba(0, 0, 0, 0.2)"
-         >
-      <a class="text-white" href="https://mdbootstrap.com/"
-         >AR-Store</a
-        >
-    </div>
-    <!-- Copyright -->
-  </footer>
-  <!-- Footer -->
-</div>
 <!-- End of .container -->
 
 
