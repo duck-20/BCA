@@ -97,68 +97,68 @@ include ('./includes/connect.php');
 
 <!-- Fourth Child -->
 <div class="row">
-        <!-- SideNav -->
-    <div class="col-md-2 bg-secondary p-0 sidenav">
-      <!-- brands to be displayed -->
-        <ul class="navbar-nav me-auto text-center">
-          <li class="nav-item bg-info">
-            <a href="#" class="nav-link text-light"><h5>Categories</h5></a>
-          </li>
-          <!-- Showing inserted categories -->
-          <?php
-            $select_category="select * from `categories`";
-            $result_category=mysqli_query($con,$select_category);
-            while($row_data=mysqli_fetch_assoc($result_category)){
-              $category_title=$row_data['category_title'];
-              $category_id=$row_data['category_id'];
-              echo "
-              <li class='nav-item'>
-              <a href='index.php?categories=$category_id' class='nav-link text-light text-capitalize'>$category_title</a>
-            </li>
-              ";
-            }
-          ?>
-        </ul>
-    </div>
-    <!-- Products -->
-    <div class="col-md-10">
-      <div class="row">
-      <div class="col-md-4 mb-4">
-      <div class="card" style="width: 18rem;">
-  <img src="./img/actionfigure.png" class="card-img-top" alt="...">
+  <!-- grid -->
+  <div class="col-6 col-md-4 mx-3">
+  <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
   <div class="card-body">
     <h5 class="card-title">Card title</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-info">Add To Cart</a>
-    <a href="#" class="btn btn-secondary">View More</a>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>
-</div>
-      <div class="col-md-4">
-      <div class="card" style="width: 18rem;">
-  <img src="./img/goku.png" class="card-img-top" alt="...">
+  </div>
+  <!-- grid -->
+  <!-- grid -->
+  <div class="col-6 col-md-4 mx-3">
+  <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
   <div class="card-body">
     <h5 class="card-title">Card title</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-info">Add To Cart</a>
-    <a href="#" class="btn btn-secondary">View More</a>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>
-      </div>
-      <div class="col-md-4">
-      <div class="card" style="width: 18rem;">
-  <img src="./img/deathnote.png" class="card-img-top" alt="...">
+  </div>
+  <!-- grid -->
+  <!-- grid -->
+  <div class="col-6 col-md-4 mx-3">
+  <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
   <div class="card-body">
     <h5 class="card-title">Card title</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-info">Add To Cart</a>
-    <a href="#" class="btn btn-secondary">View More</a>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>
+  </div>
+  <!-- grid -->
+  <!-- grid -->
+  <div class="col-6 col-md-4 mx-3">
+  <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
 </div>
+  </div>
+  <!-- grid -->
+  <!-- grid -->
+  <div class="col-6 col-md-4 mx-3">
+  <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+  </div>
+  <!-- grid -->
 </div>
 
-</div>
 
 
 

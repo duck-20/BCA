@@ -20,8 +20,8 @@ include ('./includes/connect.php');
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navbar -->
-    <div class="container-fluid p-0">
+  <!-- Navbar -->
+<div class="container-fluid p-0">
         <!-- First Child -->
         <nav class="navbar navbar-expand-lg bg-info">
   <div class="container-fluid">
@@ -96,7 +96,42 @@ include ('./includes/connect.php');
 </div>
 
 <!-- Fourth Child -->
-<div class="row">
+<div class="row px-3">
+  <!-- Products -->
+<div class="col-md-10">
+      <div class="row">
+            <!-- fetching items -->
+            <?php 
+            $select_query="select * from `products`";
+            $result_query=mysqli_query($con,$select_query);
+            while($row=mysqli_fetch_assoc($result_query)){
+                $product_id=$row['product_id'];
+                $product_name=$row['product_name'];
+                $product_description=$row['product_description'];
+                $product_keywords=$row['product_keywords'];
+                $product_image1=$row['product_image1'];
+                $product_price=$row['product_price'];
+                $category_id=$row['category_id'];
+                echo " <div class='col-md-4 mb-2'>
+                <div class='card' style='width: 18rem;'>
+                    <img src='./img/actionfigure.png' class='card-img-top' alt='...'>
+                    <div class='card-body'>
+                    <h5 class='card-title'>Card title</h5>
+                    <p class='card-text'>Some quick example text to build on the card title and make up the bulk of the cards content.</p>
+                    <a href='#' class='btn btn-info'>Add To Cart</a>
+                    <a href='#' class='btn btn-secondary'>View More</a>
+            </div>
+          </div>
+        </div>";
+            }
+            ?>
+
+
+
+    <!-- row end -->
+  </div>
+  <!-- col end -->
+</div>
         <!-- SideNav -->
     <div class="col-md-2 bg-secondary p-0 sidenav">
       <!-- brands to be displayed -->
@@ -120,45 +155,7 @@ include ('./includes/connect.php');
           ?>
         </ul>
     </div>
-    <!-- Products -->
-    <div class="col-md-10">
-      <div class="row">
-      <div class="col-md-4 mb-4">
-      <div class="card" style="width: 18rem;">
-  <img src="./img/actionfigure.png" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-info">Add To Cart</a>
-    <a href="#" class="btn btn-secondary">View More</a>
-  </div>
-</div>
-</div>
-      <div class="col-md-4">
-      <div class="card" style="width: 18rem;">
-  <img src="./img/goku.png" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-info">Add To Cart</a>
-    <a href="#" class="btn btn-secondary">View More</a>
-  </div>
-</div>
-      </div>
-      <div class="col-md-4">
-      <div class="card" style="width: 18rem;">
-  <img src="./img/deathnote.png" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-info">Add To Cart</a>
-    <a href="#" class="btn btn-secondary">View More</a>
-  </div>
-</div>
-</div>
-</div>
-
-</div>
+    
 
 
 
