@@ -30,7 +30,7 @@ nav{
     border-radius: 100%;
     object-fit: contain;
 }
-footer{
+.admin-footer{
     position: absolute;
     bottom:0;
 }

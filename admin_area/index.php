@@ -48,9 +48,9 @@
                 </div>
                 <!-- button*10>a.nav-link.text-light -->
                 <div class="button text-center mx-auto">
-                    <a href="insert_categories.php" class="btn btn-primary m-1">Insert Products</a>
+                    <a href="" class="btn btn-primary m-1">Insert Products</a>
                     <a href="" class="btn btn-primary m-1">View Products</a>
-                    <a href="" class="btn btn-primary m-1">Insert Categories</a>
+                    <a href="index.php?insert_categories" class="btn btn-primary m-1">Insert Categories</a>
                     <a href="" class="btn btn-primary m-1">View Categories</a>
                     <a href="" class="btn btn-primary m-1">All Orders</a>
                     <a href="" class="btn btn-primary m-1">All Payments</a>
@@ -60,8 +60,17 @@
                 </div>
             </div>
         </div>
+        <!-- Fourth Child -->
+        <div class="container my-2">
+            <!-- For Insert -->
+            <?php
+                if(isset($_GET['insert_categories'])){
+                    include('insert_categories.php');
+                }
+            ?>
+        </div>
         <!-- Footer -->
-        <footer class="bg-info text-center w-100">
+        <footer class="bg-info text-center w-100 admin-footer">
             <p class="my-3">Welcome Admin</p>
         </footer>
     </div>
