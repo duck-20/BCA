@@ -49,6 +49,7 @@ include('./functions/common_function.php')
         <div class='dropdown-menu' aria-labelledby='navbarDropMenuLink'>
         <?php
             getCategories();
+           
           ?>
           </div>
   
@@ -93,6 +94,8 @@ include('./functions/common_function.php')
             <!-- fetching items -->
             <?php 
                 getProducts();
+                getUniqueCategories();
+
             ?>
       <!-- row end -->
   </div>
