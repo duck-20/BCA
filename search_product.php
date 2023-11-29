@@ -22,10 +22,8 @@ include('./functions/common_function.php')
         <!-- First Child -->
        <!-- Header navbar -->
        <?php include('./includes/header.php') ?>
-<!-- second child search bar -->
-<?php include('./includes/searchBar.php') ?>
 <!-- third child -->
-<div class="bg-light">
+<div class="bg-light mt-2">
     <h3 class="text-center">Items and Accessories</h3>
     <p class="text-center">Get Your Anime merch and accessories.</p>
 </div>

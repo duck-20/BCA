@@ -22,15 +22,17 @@ include('./functions/common_function.php')
         <!-- First Child -->
        <!-- Header navbar -->
        <?php include('./includes/header.php') ?>
-<!-- second child search bar -->
-<?php include('./includes/searchBar.php') ?>
-<!-- third child -->
-<div class="bg-light">
+<!-- second child -->
+<div class="">
+  <img src="./img/homepageback.jpg" class="homepage-photo" alt="">
+</div>
+<!-- third -->
+<div class="bg-light pt-5">
     <h3 class="text-center">Items and Accessories</h3>
     <p class="text-center">Get Your Anime merch and accessories.</p>
 </div>
 
-<!-- Fourth Child -->
+<!-- fourth Child -->
 <div class="row px-1 m-2">
   <!-- Products -->
 <div class="col-md-12">

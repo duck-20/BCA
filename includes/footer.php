@@ -1,5 +1,5 @@
 <!-- Remove the container if you want to extend the Footer to full width. -->
-<div class="">
+<div class="fs-5">
 
   <footer class="bg-info text-center text-white">
   <!-- Grid container -->
