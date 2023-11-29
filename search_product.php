@@ -37,7 +37,7 @@ include('./functions/common_function.php')
       <div class="row">
             <!-- fetching items -->
             <?php 
-                getProducts();
+                searchProduct();
                 getUniqueCategories();
 
             ?>

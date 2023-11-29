@@ -70,8 +70,8 @@
             ?>
         </div>
         <!-- Footer -->
-        <footer class="bg-info text-center w-100 admin-footer">
-            <p class="my-3">Welcome Admin</p>
+        <footer class="bg-info text-center p-3 admin-footer">
+            <p>AR Store</p>
         </footer>
     </div>
 

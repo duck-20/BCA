@@ -3,7 +3,6 @@
 include ('./includes/connect.php');
 include('./functions/common_function.php')
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,17 +10,14 @@ include('./functions/common_function.php')
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AR Store</title>
     <link rel="icon" type="image" href="./img/head-logo.png">
-    <!-- Bootstraps,Fonts,styles -->
-    <?php 
-    include('./includes/links.php')
-    ?>
-</head>
+
+    <!-- Bootstraps -->
+    <?php  include('./includes/links.php') ?>
 <body>
   <!-- Navbar -->
 <div class="container-fluid p-0">
-        <!-- First Child -->
-       <!-- Header navbar -->
-       <?php include('./includes/header.php') ?>
+<!-- First Child -->
+<?php include('./includes/header.php') ?>
 <!-- second child search bar -->
 <?php include('./includes/searchBar.php') ?>
 <!-- third child -->
@@ -37,26 +33,23 @@ include('./functions/common_function.php')
       <div class="row">
             <!-- fetching items -->
             <?php 
-                getProducts();
+                allProducts();
                 getUniqueCategories();
 
             ?>
       <!-- row end -->
-    </div>
-  <!-- col end -->
   </div>
+  <!-- col end -->
 </div>
-
-<!-- last child -->
-<!-- Footer -->
+<!-- fourth end -->
+</div>
+<!-- footer -->
 <?php 
 include ('./includes/footer.php');
 ?>
-
-
-
+</div>
     
-<!-- bootstrap js -->
+<!-- Bootstraps js -->
 <?php include('./includes/bootstrapsjs.php') ?>
 </body>
 </html>

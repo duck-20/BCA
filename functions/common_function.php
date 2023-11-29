@@ -24,6 +24,38 @@ function getProducts(){
     //condition to check isset or not:
             if(!isset($_GET['categories'])){
 
+            $select_query="select * from `products` order by rand() LIMIT 0,4";
+            $result_query=mysqli_query($con,$select_query);
+            while($row=mysqli_fetch_assoc($result_query)){
+                $product_id=$row['product_id'];
+                $product_name=$row['product_name'];
+                $product_description=$row['product_description'];
+                $product_keywords=$row['product_keywords'];
+                $product_image1=$row['product_image1'];
+                $product_price=$row['product_price'];
+                $category_id=$row['category_id'];
+                echo " <div class='col-md-4 mb-3'>
+                
+                <div class='card'>
+                    <img src='./admin_area/product_images/$product_image1' class='card-img-top p-2' alt='...'>
+                    <div class='card-body'>
+                        <h5 class='card-title'>$product_name</h5>
+                        <p class='card-text'>$product_description</p>
+                        <a href='#' class='btn btn-primary'>Add To Cart</a>
+                                        <a href='#' class='btn btn-secondary'>View More</a>
+                                        
+                                </div>
+                            </div>
+                            </div>";
+                }
+        }
+}
+// Getting all products
+function allProducts(){
+    global $con;
+    //condition to check isset or not:
+            if(!isset($_GET['categories'])){
+
             $select_query="select * from `products` order by rand()";
             $result_query=mysqli_query($con,$select_query);
             while($row=mysqli_fetch_assoc($result_query)){
@@ -86,4 +118,42 @@ function getUniqueCategories(){
                 }
         }
 }
+?>
+
+<!-- searching products -->
+<?php
+function searchProduct(){
+    global $con;
+    if(isset($_GET['search_data_product'])){
+        $search_data_value=$_GET['search_data'];
+        $search_query="select * from `products` where product_keywords like '%$search_data_value%'";
+            $result_query=mysqli_query($con,$search_query);
+            $num_of_rows=mysqli_num_rows($result_query);
+            if($num_of_rows===0){
+                echo " <h2 class='text-center text-danger'>No Result Found.</h2>";
+            }
+            while($row=mysqli_fetch_assoc($result_query)){
+                $product_id=$row['product_id'];
+                $product_name=$row['product_name'];
+                $product_description=$row['product_description'];
+                $product_keywords=$row['product_keywords'];
+                $product_image1=$row['product_image1'];
+                $product_price=$row['product_price'];
+                $category_id=$row['category_id'];
+                echo " <div class='col-md-4 mb-3'>
+                
+                <div class='card'>
+                    <img src='./admin_area/product_images/$product_image1' class='card-img-top p-2' alt='...'>
+                    <div class='card-body'>
+                        <h5 class='card-title'>$product_name</h5>
+                        <p class='card-text'>$product_description</p>
+                        <a href='#' class='btn btn-primary'>Add To Cart</a>
+                                        <a href='#' class='btn btn-secondary'>View More</a>
+                                        
+                                </div>
+                            </div>
+                            </div>";
+                }
+        }
+    }
 ?>
