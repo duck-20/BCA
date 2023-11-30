@@ -35,11 +35,3 @@ nav{
     bottom:0;
     width: 100%;
 }
-.header{
-    position: fixed;
-    top: 0;
-}
-.homepage-photo{
-    max-height: 100vh;
-    object-fit: contain;
-}

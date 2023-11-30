@@ -25,24 +25,9 @@ include('./functions/common_function.php')
        <!-- Header navbar -->
        <?php include('./includes/header.php') ?>
 <!-- second child -->
-<div class="pt-5">
-  <div class="card w-100">
-    <div class="container w-100">
-    <img src="./img/homepageback-gojo.jpg" class=" img-fluid w-100" alt="Gojo image">
-    </div>
-<div class="card-img-overlay">
-    <div class="card-body text-dark px-5 mt-5">
-      <p class="card-title display-1 font-weight-bolder">Anime Merch</p>
-      <p class="card-subtitle display-4 font-weight-light">Shop Till You Go bankrupt!</p>
-      <a href="products.php" role="button" class="btn btn-primary mt-5">Shop Now</a>
-
-    </div>
-  </div>
-  </div>
-</div>
 <!-- third -->
 <div class="bg-light pt-5">
-    <h3 class="text-center">Items and Accessories</h3>
+    <h3 class="text-center mt-5">Items and Accessories</h3>
     <p class="text-center">Get Your Anime merch and accessories.</p>
 </div>
 
@@ -50,10 +35,10 @@ include('./functions/common_function.php')
 <div class="row px-1 m-2">
   <!-- Products -->
 <div class="col-md-12">
-      <div class="row">
+      <div class="row border rounded">
             <!-- fetching items -->
             <?php 
-                getProducts();
+                view_details();
                 getUniqueCategories();
 
             ?>
@@ -62,7 +47,6 @@ include('./functions/common_function.php')
   <!-- col end -->
   </div>
 </div>
-
 <!-- last child -->
 <!-- Footer -->
 <?php 

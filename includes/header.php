@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-info">
+<nav class="navbar navbar-expand-lg bg-info fixed-top">
   <div class="container-fluid">
     <img src="./img/brand-logo.png" class="logo" alt="brand-logo">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,6 +30,9 @@
 </div>
 </li>
       <!-- dropdown  -->
+      <li class="nav-item">
+          <a class="nav-link " href="#">About Us</a>
+        </li>
         <li class="nav-item">
           <a class="nav-link " href="#">Contact</a>
         </li>
