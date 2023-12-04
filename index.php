@@ -24,8 +24,12 @@ include('./functions/common_function.php')
         <!-- First Child -->
        <!-- Header navbar -->
        <?php include('./includes/header.php') ?>
+       <!-- Calling cart function -->
+       <?php  
+       cart();
+       ?>
 <!-- second child -->
-<div class="pt-5">
+<div class="">
   <div class="card w-100">
     <div class="container w-100">
     <img src="./img/homepageback-gojo.jpg" class=" img-fluid w-100" alt="Gojo image">

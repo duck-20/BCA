@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-info fixed-top">
+<nav class="navbar navbar-expand-lg bg-info">
   <div class="container-fluid">
     <img src="./img/brand-logo.png" class="logo" alt="brand-logo">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

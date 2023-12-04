@@ -41,7 +41,7 @@ function getProducts(){
                     <div class='card-body'>
                         <h5 class='card-title'>$product_name</h5>
                         <p class='fs-5'>Rs-$product_price</p>
-                        <a href='#' class='btn btn-primary'>Add To Cart</a>
+                        <a href='index.php?add_to_cart=$product_id' class='btn btn-primary'>Add To Cart</a>
                                         <a href='product_details.php?product_id=$product_id' class='btn btn-secondary'>View More</a>
                                         
                                 </div>
@@ -73,7 +73,7 @@ function allProducts(){
                     <div class='card-body'>
                         <h5 class='card-title'>$product_name</h5>
                         <p class='fs-5'>Rs-$product_price</p>
-                        <a href='#' class='btn btn-primary'>Add To Cart</a>
+                        <a href='index.php?add_to_cart=$product_id' class='btn btn-primary'>Add To Cart</a>
                                         <a href='product_details.php?product_id=$product_id' class='btn btn-secondary'>View More</a>
                                         
                                 </div>
@@ -109,7 +109,7 @@ function getUniqueCategories(){
                     <div class='card-body'>
                         <h5 class='card-title'>$product_name</h5>
                         <p class='fs-5'>Rs-$product_price</p>
-                        <a href='#' class='btn btn-primary'>Add To Cart</a>
+                        <a href='index.php?add_to_cart=$product_id' class='btn btn-primary'>Add To Cart</a>
                                         <a href='product_details.php?product_id=$product_id' class='btn btn-secondary'>View More</a>
                                         
                                 </div>
@@ -145,7 +145,7 @@ function searchProduct(){
                     <div class='card-body'>
                         <h5 class='card-title'>$product_name</h5>
                         <p class='fs-5'>Rs-$product_price</p>
-                        <a href='#' class='btn btn-primary'>Add To Cart</a>
+                        <a href='index.php?add_to_cart=$product_id' class='btn btn-primary'>Add To Cart</a>
                                         <a href='product_details.php?product_id=$product_id' class='btn btn-secondary'>View More</a>
                                         
                                 </div>
@@ -181,7 +181,7 @@ function view_details(){
                     <div class='card-body'>
                         <h5 class='card-title'>$product_name</h5>
                         <p class='fs-5'>Rs-$product_price</p>
-                        <a href='#' class='btn btn-primary'>Add To Cart</a>
+                        <a href='index.php?add_to_cart=$product_id' class='btn btn-primary'>Add To Cart</a>
                                         <a href='product_details.php?product_id=$product_id' class='btn btn-secondary'>View More</a>
                                         
                                 </div>
@@ -227,4 +227,25 @@ function getIPAddress() {
 // $ip = getIPAddress();  
 // echo 'User Real IP Address - '.$ip;  
 
+//Cart Function
+function cart(){
+if(isset($_GET['add_to_cart'])){
+    global $con;
+    $get_ip=getIPAddress();
+    $get_product_id=$_GET['add_to_cart'];
+    $select_query="select * from `cart_details` where ip_address='$get_ip' and product_id=$get_product_id";
+    $result_query=mysqli_query($con,$select_query);
+    $num_of_rows=mysqli_num_rows($result_query);
+    if($num_of_rows>0){
+        echo "<script>alert('Item already Added.')</script>";
+        echo "<script>window.Open('index.php','_self')</script>";
+    }
+    else{
+        $insert_query="insert into `cart_details` (product_id,ip_address,quantity) values ($get_product_id,'$get_ip',0)";
+        $result_query=mysqli_query($con,$insert_query);
+        echo "<script>alert('Items Added To Cart!')</script>";
+        echo "<script>window.Open('index.php','_self')</script>";
+    }
+}
+}
 ?>
