@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-info">
+<nav class="navbar navbar-expand-lg bg-primary text-white">
   <div class="container-fluid">
     <img src="./img/brand-logo.png" class="logo" alt="brand-logo">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -6,11 +6,11 @@
   </button>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-5">
-        <li class="nav-item">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-5 ">
+        <li class="nav-item text-white">
           <a class="nav-link " aria-current="page" href="index.php">Home</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item text-white">
           <a class="nav-link " href="products.php">Products</a>
         </li>
         <!-- dropdown -->
@@ -37,7 +37,7 @@
           <a class="nav-link " href="#">Contact</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="#"><i class="fa-solid fa-cart-shopping"></i><sup>1</sup></a>
+          <a class="nav-link " href="cart.php"><i class="fa-solid fa-cart-shopping"></i><sup><?php cart_item(); ?></sup></a>
         </li>
         <li class="nav-item">
 <form class="d-flex position-relative w-100" role="search" action="search_product.php" method="get">

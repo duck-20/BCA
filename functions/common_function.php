@@ -24,7 +24,7 @@ function getProducts(){
     //condition to check isset or not:
             if(!isset($_GET['categories'])){
 
-            $select_query="select * from `products` order by rand() LIMIT 0,4";
+            $select_query="select * from `products` order by rand() LIMIT 0,3";
             $result_query=mysqli_query($con,$select_query);
             while($row=mysqli_fetch_assoc($result_query)){
                 $product_id=$row['product_id'];
@@ -182,7 +182,7 @@ function view_details(){
                         <h5 class='card-title'>$product_name</h5>
                         <p class='fs-5'>Rs-$product_price</p>
                         <a href='index.php?add_to_cart=$product_id' class='btn btn-primary'>Add To Cart</a>
-                                        <a href='product_details.php?product_id=$product_id' class='btn btn-secondary'>View More</a>
+                                        <a href='index.php' class='btn btn-secondary'>Go Home</a>
                                         
                                 </div>
                             </div>
@@ -248,4 +248,23 @@ if(isset($_GET['add_to_cart'])){
     }
 }
 }
+
+// function for cart items num
+function cart_item(){
+    if(isset($_GET['add_to_cart'])){
+        global $con;
+        $get_ip=getIPAddress();
+        $select_query="select * from `cart_details` where ip_address='$get_ip'";
+        $result_query=mysqli_query($con,$select_query);
+        $count_cart_items=mysqli_num_rows($result_query);
+    }
+    else{
+            global $con;
+            $get_ip=getIPAddress();
+            $select_query="select * from `cart_details` where ip_address='$get_ip'";
+            $result_query=mysqli_query($con,$select_query);
+            $count_cart_items=mysqli_num_rows($result_query);
+        }
+        echo $count_cart_items;
+    }
 ?>

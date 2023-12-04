@@ -1,7 +1,7 @@
 <!-- Remove the container if you want to extend the Footer to full width. -->
-<div class="fs-5">
+<div class="fs-5 w-100">
 
-  <footer class="bg-info text-center text-white">
+  <footer class="bg-primary text-center text-white position">
   <!-- Grid container -->
   <div class="container p-4 pb-0">
     <!-- Section: Social media -->

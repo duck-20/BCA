@@ -24,6 +24,7 @@ include('./functions/common_function.php')
         <!-- First Child -->
        <!-- Header navbar -->
        <?php include('./includes/header.php') ?>
+       <?php cart(); ?>
 <!-- second child -->
 <!-- third -->
 <div class="bg-light pt-5">

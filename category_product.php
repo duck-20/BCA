@@ -18,6 +18,8 @@ include('./functions/common_function.php')
 <div class="container-fluid p-0">
 <!-- First Child -->
 <?php include('./includes/header.php') ?>
+<?php cart(); ?>
+
 <!-- third child -->
 <div class="bg-light pt-5">
     <h3 class="text-center pt-5">Items and Accessories</h3>
