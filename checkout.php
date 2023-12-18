@@ -30,14 +30,14 @@ include('./functions/common_function.php');
        <!-- checkout -->
        <div class="row px-1">
         <div class="col-md-12">
-            <?php 
-            <div class="row">
+            <?php
+            
                 if(!isset($_SESSION['username']))
                 {
                     include('users_area/user_login.php');
                 }
                 else{
-                    include('')
+                    include('payment.php');
                 }
                 ?>
 
