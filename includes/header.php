@@ -48,10 +48,10 @@
       </ul>
       <ul class="navbar-nav fs-5">
     <li class="nav-item">
-          <a class="nav-link " href="#">Welcome Guest</a>
+          <a class="nav-link " href="">Welcome Guest</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="#">Login/Logout</a>
+          <a class="nav-link " href="user_login.php">Login/Logout</a>
         </li>
     </div>
   </div>

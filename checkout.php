@@ -34,7 +34,7 @@ include('./functions/common_function.php');
             
                 if(!isset($_SESSION['username']))
                 {
-                    include('users_area/user_login.php');
+                    include('user_login.php');
                 }
                 else{
                     include('payment.php');
