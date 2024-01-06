@@ -1,6 +1,8 @@
 <?php
 //including database
 // include("./includes/connect.php");
+
+
 //getting categories
 function getCategories()
 {
