@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <nav class="navbar navbar-expand-lg bg-primary text-white">
   <div class="container-fluid">
     <img src="./img/brand-logo1.png" class="logo" alt="brand-logo">
@@ -52,12 +55,30 @@
         </li>
       </ul>
       <ul class="navbar-nav fs-5">
-        <li class="nav-item">
-          <a class="nav-link text-white" href="">Welcome Guest</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="user_login.php">Login/Logout</a>
-        </li>
+        <?php
+        if(!isset($_SESSION["username"])){
+          echo "<li class='nav-item'>
+          <a class='nav-link text-white' href=''>Welcome Guest</a>
+        </li>";
+        }
+        else{
+          echo "<li class='nav-item'>
+          <a class='nav-link text-white' href=''>Welcome ".$_SESSION['username']."</a>
+        </li>";
+        }
+
+        if(!isset($_SESSION["username"])){
+          echo "<li class='nav-item'>
+          <a class='nav-link text-white' href='user_login.php'>Login</a>
+        </li>";
+        }
+        else{
+          echo "<li class='nav-item'>
+          <a class='nav-link text-white' href='logout.php'>Logout</a>
+        </li>";
+        }
+        
+        ?>
     </div>
   </div>
 </nav>

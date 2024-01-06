@@ -1,6 +1,7 @@
 <?php
 include("./includes/connect.php");
 include("./functions/common_function.php");
+@session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -81,7 +82,7 @@ if(isset($_POST['user_login'])){
             else{
                 $_SESSION['username'] = $user_username;
                 echo "<script>alert('Login Successful')</script>";
-                echo "<script>window.open('payment.php','_self')</script>";
+                echo "<script>window.open('checkout.php','_self')</script>";
             }
         }
         else{
