@@ -40,7 +40,7 @@ include ('./includes/connect.php');
             <a href="https://esewa.com.np/#/home"  target="_blank"><img src="./img/esewalogo.png" class="w-100 mx-2" alt="esewa_logo"></a>
         </div>
             <div class="col-md-6"><h2 class="text-center mx-2">
-            <a class="text-decoration-none cash-on-delivery  " href="order.php?user_id=<?php echo $user_id; ?>">Cash On Delivery</a></h2>
+            <a class="text-decoration-none cash-on-delivery  " href="order.php?user_id=<?php echo $user_id; ?>">Pay Offline</a></h2>
         </div>
         </div>
     </div>

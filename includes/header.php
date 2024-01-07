@@ -35,9 +35,17 @@ session_start();
           </div>
         </li>
         <!-- dropdown  -->
-        <li class="nav-item">
-          <a class="nav-link text-white" href="#">About Us</a>
-        </li>
+        <?php
+        if(!isset($_SESSION["username"])){
+          echo "<li class='nav-item'>
+          <a class='nav-link text-white' href='user_registration.php'>Register</a>
+        </li>";
+        } else {
+          echo "<li class='nav-item'>
+          <a class='nav-link text-white' href='profile.php'>My Account</a>
+        </li>";
+        }
+        ?>
         <li class="nav-item">
           <a class="nav-link text-white" href="#">Contact</a>
         </li>
