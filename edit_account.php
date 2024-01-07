@@ -49,7 +49,7 @@ if (isset($_POST['user_update'])) {
         <div class="form-outline mb-4 d-flex w-50 m-auto
         ">
             <input type="file" class="m-auto form-control " name="user_image">
-            <img src="./user_images/<?php echo $user_image ?>" class="edit_image" alt="" >
+            <img src="./user_images/<?php echo $user_image ?>" class="edit_image " alt="" >
         </div>
         <div class="form-outline mb-4">
             <input type="text" class="m-auto form-control w-50" name="user_address" value="<?php echo $user_address ?>">

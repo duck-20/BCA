@@ -21,7 +21,6 @@ include('./functions/common_function.php');
         background-color: white;
         width: 90%;
         height:90%;
-        border-radius: 20%;
         object-fit: contain;
        }
        .edit_image{
@@ -82,6 +81,9 @@ include('./functions/common_function.php');
       }
        if (isset($_GET["my_orders"])) {
         include("user_orders.php");
+      }
+       if (isset($_GET["delete_account"])) {
+        include("delete_account.php");
       }
        ?>
   </div>
