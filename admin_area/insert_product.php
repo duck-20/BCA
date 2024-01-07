@@ -40,23 +40,11 @@
         }
     }
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insert Products</title>
-    <link rel="icon" type="image/png" href="../img/head-logo.png">
-    <!-- Bootstraps CSS Link -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <!-- Fonts -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- CSS -->
-    <link rel="stylesheet" href="../style.css">
-</head>
+<h3 class="text-success text-center my-3">Insert Products</h3>
 <body class="bg-light">
     <div class="container mt-3">
-        <h1 class="text-center">Insert Products</h1>
+        
+        
         <!-- Form -->
         <form action="" method="POST" enctype="multipart/form-data">
             <!-- title -->
@@ -113,6 +101,3 @@
             </div>    
         </form>
     </div>
-    
-</body>
-</html>
