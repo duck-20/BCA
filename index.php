@@ -37,8 +37,8 @@ include('./functions/common_function.php')
     </div>
 <div class="card-img-overlay">
     <div class="card-body text-dark px-5 mt-5">
-      <p class="card-title display-1 font-weight-bolder">Anime Merch</p>
-      <p class="card-subtitle display-4 font-weight-light">Shop Till You Go bankrupt!</p>
+      <p class="card-title display-1 font-weight-bolder">Anime Store</p>
+      <p class="card-subtitle display-4 font-weight-light">Cheap and Get Goods at your door step</p>
       <a href="products.php" role="button" class="btn btn-primary mt-5">Shop Now</a>
 
     </div>
