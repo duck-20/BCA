@@ -47,12 +47,7 @@ session_start();
         }
         ?>
         <li class="nav-item">
-          <a class="nav-link text-white" href="#">Contact</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="cart.php"><i class="fa-solid fa-cart-shopping"></i><sup>
-              <?php cart_item(); ?>
-            </sup></a>
+          <a class="nav-link text-white" href="contact.php">Contact</a>
         </li>
         <li class="nav-item">
           <form class="d-flex position-relative w-100" role="search" action="search_product.php" method="get">
@@ -63,6 +58,11 @@ session_start();
         </li>
       </ul>
       <ul class="navbar-nav fs-5">
+                <li class="nav-item">
+          <a class="nav-link text-white" href="cart.php"><i class="fa-solid fa-cart-shopping"></i><sup>
+              <?php cart_item(); ?>
+            </sup></a>
+        </li>
         <?php
         if(!isset($_SESSION["username"])){
           echo "<li class='nav-item'>

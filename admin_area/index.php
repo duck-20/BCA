@@ -2,14 +2,11 @@
 include("../includes/connect.php");
 include("../functions/common_function.php");
 session_start();
-if (empty($_SESSION['username'])) {
+$username=$_SESSION['admin_name'];
+if(!isset($username)) {
     header('Location: admin_login.php');
-    exit();
 }
-else{
-    
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,10 +35,10 @@ include("./includes/links.php");
         <nav class="navbar navbar-expand-md navbar-light bg-primary">
             <div class="container-fluid">
                 <img src="../img/brand-logo1.png" class="logo" alt="">
-                <nav class="navbar navbar-expand-md navbar-light bg-info">
+                <nav class="navbar navbar-expand-md navbar-light ">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a href="" class="nav-link">Welcome Guest</a>
+                            <a href="" class="nav-link text-decoration-none text-white text-capitalize">Welcome <?php echo $username ?></a>
                         </li>
 
                     </ul>
@@ -59,11 +56,6 @@ include("./includes/links.php");
         <!-- Third Child -->
         <div class="row">
             <div class="col-md-12 p-1  bg-secondary  d-flex align-items-center">
-                <div>
-                    <p class="text-light text-center">
-                        Admin name
-                    </p>
-                </div>
                 <!-- button*10>a.nav-link.text-light -->
                 <div class="button text-center mx-auto">
                     <a href="index.php?insert_product" class="btn btn-primary m-1">Insert Products</a>
@@ -124,7 +116,7 @@ include("./includes/links.php");
             if (isset($_GET['delete_users'])) {
                 include('delete_users.php');
             }
-            }
+            
             ?>
         </div>
     </div>

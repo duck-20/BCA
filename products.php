@@ -21,7 +21,7 @@ include('./functions/common_function.php')
 <?php cart(); ?>
 
 <!-- third child -->
-<div class="bg-light mt-2">
+<div class="mt-2">
     <h3 class="text-center pt-2">Items and Accessories</h3>
     <p class="text-center">Get Your Anime merch and accessories.</p>
 </div>

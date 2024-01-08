@@ -21,7 +21,7 @@ include("./includes/links.php");
 include("./includes/links.php");
 ?>
     <div class="container-fluid my-3">
-        <h2 class="text-center mb-5">
+        <h2 class="text-center mt-5">
             Admin Registration
         </h2>
         <div class="row d-flex justify-content-center align-items-center">
@@ -34,13 +34,13 @@ include("./includes/links.php");
                         <label for="username" class="form-label">
                             Username
                         </label>
-                        <input type="text" id="username" name="username" placeholder="Enter your username"  class="form-control" required>
+                        <input type="text" autocomplete="off" id="username" name="username" placeholder="Enter your username"  class="form-control" required>
                     </div>
                     <div class="form-outline mb-4">
                         <label for="email" class="form-label">
                             Email
                         </label>
-                        <input type="text" id="email" name="email" placeholder="Enter your email" class="form-control" required >
+                        <input type="text" autocomplete="off" id="email" name="email" placeholder="Enter your email" class="form-control" required >
                     </div>
                     <div class="form-outline mb-4">
                         <label for="password" class="form-label">

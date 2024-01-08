@@ -1,7 +1,30 @@
 <?php
 include("../includes/connect.php");
 include("../functions/common_function.php");
-session_start();
+if(isset($_POST['admin_login'])){
+    include("../includes/connect.php");
+    $username=$_POST["username"];
+    $password=$_POST["password"];
+    $select_query ="SELECT * FROM `admin_table` WHERE  `admin_name` = '$username'";
+    $result=mysqli_query($con,$select_query);
+    $rows_count=mysqli_num_rows($result);
+    if ($rows_count > 0) {
+        while($row_data=mysqli_fetch_assoc($result)){
+        if (password_verify($password, $row_data['admin_password'])) {
+                session_start();
+                $_SESSION['admin_name'] = $username;
+                // echo "<script>alert('Login Successful')</script>";
+                // echo "<script>window.open('index.php','_self')</script>";
+                header("location: index.php");
+                    exit();
+            }
+        }
+    }
+    else{
+        echo "<script>alert('Invalid Credentials')</script>";
+    }
+
+}
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +45,7 @@ include("./includes/links.php");
 include("./includes/links.php");
 ?>
     <div class="container-fluid my-3">
-        <h2 class="text-center mb-5">
+        <h2 class="text-center mt-5">
             Admin Login
         </h2>
         <div class="row d-flex justify-content-center align-items-center">
@@ -58,33 +81,3 @@ include("./includes/links.php");
 </html>
 
 <!-- PHP code -->
-<?php
-if(isset($_POST['admin_login'])){
-    $username=$_POST["username"];
-    $password=$_POST["password"];
-    $select_query = "Select * from `admin_table` where admin_name='$username'";
-    $result=mysqli_query($con,$select_query);
-    $rows_count=mysqli_num_rows($result);
-    $row_data=mysqli_fetch_assoc($result);
-
-    if ($rows_count > 0) {
-        if (password_verify($password, $row_data['admin_password'])) {
-            // echo "<script>alert('Login Successful')</script>";
-            if ($rows_count == 1) {
-                $_SESSION['admin_name'] = $username;
-                echo "<script>alert('Login Successful')</script>";
-                echo "<script>window.open('index.php','_self')</script>";
-
-            }
-        }
-        else{
-            echo "<script>alert('Invalid Credentials')</script>";
-        }
-    }
-    else{
-        echo "<script>alert('Invalid Credentials')</script>";
-    }
-
-}
-
-?>

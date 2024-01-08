@@ -46,7 +46,7 @@ include('./functions/common_function.php')
   </div>
 </div>
 <!-- third -->
-<div class="bg-light pt-5">
+<div class=" pt-2">
     <h3 class="text-center">Items and Accessories</h3>
     <p class="text-center">Get Your Anime merch and accessories.</p>
 </div>

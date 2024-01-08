@@ -8,7 +8,7 @@
         echo" 
         <h3 class='text-center text-success my-4'>All Orders</h3>
         <table class='table table-bordered mt-5'>
-    <thead class='text-center'>
+    <thead class='text-center bg-primary'>
                <tr>
             <th>SNo.</th>
             <th>Due Amount</th>

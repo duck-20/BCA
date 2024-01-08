@@ -182,10 +182,10 @@ function view_details()
                 $product_image3 = $row['product_image3'];
                 $product_price = $row['product_price'];
                 $category_id = $row['category_id'];
-                echo " <div class='col-md-4 mb-3'>
+                echo " <div class='col-md-4 my-4'>
                 
-                <div class='card'>
-                    <img src='./admin_area/product_images/$product_image1' class='card-img-top p-2' alt='...'>
+                <div class='card pt-2'>
+                    <img src='./admin_area/product_images/$product_image1' class='card-img-top pt-2' alt='...'>
                     <div class='card-body'>
                         <h5 class='card-title'>$product_name</h5>
                         <p class='fs-5'>Rs-$product_price</p>
@@ -199,7 +199,7 @@ function view_details()
                             <!--related Images -->
                             <div class='row m-2'>
                               <div class='col-md-12'>
-                                <h4 class='text-center'>Related Products</h4>
+                                <h4 class='text-center m-2'>Related Products</h4>
                               </div>
                               <div class='col-md-6'>
                               <img src='./admin_area/product_images/$product_image2' class='card-img-top p-2 border' alt='...'>

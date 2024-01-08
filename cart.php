@@ -35,7 +35,7 @@ include('./functions/common_function.php')
        cart();
        ?>
 <!-- contents -->
-<div class="bg-light pt-2">
+<div class="pt-2">
     <h3 class="text-center">Your Cart</h3>
 </div>
 <!-- contents-table -->
@@ -81,14 +81,14 @@ include('./functions/common_function.php')
                 <tr>
                     <td><?php echo $product_name ?></td>
                     <td><img src="./admin_area/product_images/<?php echo $product_image1 ?>" alt="" class="cart-image"></td>
-                    <td><input type="text" name="qty" class="form-input w-25" autocomplete=off></td>
+                    <td><input type="number" name="qty" class="w-25" value="1" autocomplete=off></td>
                     <?php 
                         $get_ip=getIPAddress();
                         if(isset($_POST['update_cart'])){
                                 $quantities=$_POST['qty'];
                                 $update_cart="update `cart_details` set quantity=$quantities where ip_address='$get_ip'";
                                 $result_products_quantity=mysqli_query($con,$update_cart);
-                                $total_price=$total_price*$quantities;
+                        $total_price = $total_price * $quantities;
                         }
                     ?>
                     <td><?php echo $product_values ?></td>

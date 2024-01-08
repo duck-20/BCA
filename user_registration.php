@@ -130,6 +130,7 @@ if (isset($_POST["user_register"])) {
         $sql_execute = mysqli_query($con, $insert_query);
         move_uploaded_file($user_image_tmp, "./user_images/$user_image");
         echo "<script>alert('User Created.')</script>";
+        echo "<script>window.open('user_login.php')</script>";
     }
 
     //selecting cart items$_SESSION['username']
