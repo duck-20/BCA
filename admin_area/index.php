@@ -1,6 +1,13 @@
 <?php
 include("../includes/connect.php");
 include("../functions/common_function.php");
+session_start();
+if (empty($_SESSION['username'])) {
+    header('Location: admin_login.php');
+    exit();
+}
+else{
+    
 ?>
 
 <!DOCTYPE html>
@@ -25,16 +32,7 @@ include("./includes/links.php");
     }
 </style>
 </head>
-<body>
-            <?php
-            
-                if(!isset($_SESSION['username']))
-                {
-                    echo "<script>window.open('admin_login.php','_self')</script>";
-                } else { ?>
-                    
-
-    <!-- Navbar -->
+<body> <!-- Navbar -->
     <div class="container-fluid p-0">
         <!-- first Child -->
         <nav class="navbar navbar-expand-md navbar-light bg-primary">
@@ -62,7 +60,6 @@ include("./includes/links.php");
         <div class="row">
             <div class="col-md-12 p-1  bg-secondary  d-flex align-items-center">
                 <div>
-                    <a href="#"><img src="https://picsum.photos/id/237/200/300" class="admin_image" alt=""></a>
                     <p class="text-light text-center">
                         Admin name
                     </p>

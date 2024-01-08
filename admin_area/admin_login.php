@@ -35,7 +35,7 @@ include("./includes/links.php");
                         <label for="username" class="form-label">
                             Username
                         </label>
-                        <input type="text" id="username" name="username" placeholder="Enter your username"  class="form-control" required>
+                        <input type="text" id="username" name="username" placeholder="Enter your username"  class="form-control" required autocomplete="off">
                     </div>
                     <div class="form-outline mb-4">
                         <label for="password" class="form-label">
