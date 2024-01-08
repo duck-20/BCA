@@ -26,6 +26,14 @@ include("./includes/links.php");
 </style>
 </head>
 <body>
+            <?php
+            
+                if(!isset($_SESSION['username']))
+                {
+                    echo "<script>window.open('admin_login.php','_self')</script>";
+                } else { ?>
+                    
+
     <!-- Navbar -->
     <div class="container-fluid p-0">
         <!-- first Child -->
@@ -66,9 +74,9 @@ include("./includes/links.php");
                     <a href="index.php?insert_categories" class="btn btn-primary m-1">Insert Categories</a>
                     <a href="index.php?view_categories" class="btn btn-primary m-1">View Categories</a>
                     <a href="index.php?list_orders" class="btn btn-primary m-1">All Orders</a>
-                    <a href="" class="btn btn-primary m-1">All Payments</a>
-                    <a href="" class="btn btn-primary m-1">List Users</a>
-                    <a href="" class="btn btn-primary m-1">Logout</a>
+                    <a href="index.php?list_payments" class="btn btn-primary m-1">All Payments</a>
+                    <a href="index.php?list_users" class="btn btn-primary m-1">List Users</a>
+                    <a href="admin_logout.php" class="btn btn-primary m-1">Logout</a>
 
                 </div>
             </div>
@@ -77,33 +85,49 @@ include("./includes/links.php");
         <div class="container my-2">
             <!-- For Insert -->
             <?php
-                if(isset($_GET['insert_product'])){
-                    include('insert_product.php');
-                }
-                if(isset($_GET['insert_categories'])){
-                    include('insert_categories.php');
-                }
-                if(isset($_GET['view_products'])){
-                    include('view_products.php');
-                }
-                if(isset($_GET['edit_products'])){
-                    include('edit_products.php');
-                }
-                 if(isset($_GET['delete_products'])){
-                    include('delete_products.php');
-                }
-                 if(isset($_GET['view_categories'])){
-                    include('view_categories.php');
-                }
-                 if(isset($_GET['edit_categories'])){
-                    include('edit_categories.php');
-                }
-                 if(isset($_GET['delete_categories'])){
-                    include('delete_categories.php');
-                }
-                 if(isset($_GET['list_orders'])){
-                    include('list_orders.php');
-                }
+            if (isset($_GET['insert_product'])) {
+                include('insert_product.php');
+            }
+            if (isset($_GET['insert_categories'])) {
+                include('insert_categories.php');
+            }
+            if (isset($_GET['view_products'])) {
+                include('view_products.php');
+            }
+            if (isset($_GET['edit_products'])) {
+                include('edit_products.php');
+            }
+            if (isset($_GET['delete_products'])) {
+                include('delete_products.php');
+            }
+            if (isset($_GET['view_categories'])) {
+                include('view_categories.php');
+            }
+            if (isset($_GET['edit_categories'])) {
+                include('edit_categories.php');
+            }
+            if (isset($_GET['delete_categories'])) {
+                include('delete_categories.php');
+            }
+            if (isset($_GET['list_orders'])) {
+                include('list_orders.php');
+            }
+            if (isset($_GET['delete_orders'])) {
+                include('delete_orders.php');
+            }
+            if (isset($_GET['list_payments'])) {
+                include('list_payments.php');
+            }
+            if (isset($_GET['delete_payments'])) {
+                include('delete_payments.php');
+            }
+            if (isset($_GET['list_users'])) {
+                include('list_users.php');
+            }
+            if (isset($_GET['delete_users'])) {
+                include('delete_users.php');
+            }
+            }
             ?>
         </div>
     </div>
