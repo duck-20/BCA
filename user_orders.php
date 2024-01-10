@@ -5,6 +5,7 @@ $result=mysqli_query($con, $get_user);
 $row_fetch=mysqli_fetch_assoc($result);
 $user_id = $row_fetch['user_id'];
 ?>
+
 <h3 class="text-success text-center my-4">All My Orders</h3>
 <table class="table table-bordered mt-5 me-5">
     <thead class="bg-primary text-center">
@@ -20,7 +21,7 @@ $user_id = $row_fetch['user_id'];
     </thead>
     <tbody class="text-center">
         <?php
-         $number = 1;
+         $number = 0;
         $get_order_details = "Select * from `user_orders` where user_id=$user_id";
         $result_orders=mysqli_query($con, $get_order_details);
         while ($row_data = mysqli_fetch_assoc($result_orders)) {
@@ -36,7 +37,7 @@ $user_id = $row_fetch['user_id'];
             }
 
             $order_date = $row_data["order_date"];
-
+            $number++;
             echo "<tr>
             <td>$number</td>
             <td>$amount_due</td>
@@ -59,3 +60,4 @@ $user_id = $row_fetch['user_id'];
 
     </tbody>
 </table>
+<a href="pdf.php" target="_blank" class="btn btn-danger my-3">Generate Bill</a>
