@@ -62,12 +62,11 @@ include("./includes/links.php");
                     </div>
                     <div class="form-outline mb-4">
                         <label for="password" class="form-label">
-                            Password
                         </label>
-                        <input type="text" id="password" name="password" placeholder="Enter your password" class="form-control" required >
+                        <input type="password" id="password" name="password" placeholder="Enter your password" class="form-control" required >
                     </div>
                     <div class="form-outline mb-4">
-                        <input type="submit" value="Register" class="btn btn-primary mb-2" name="admin_login">
+                        <input type="submit" value="Login" class="btn btn-primary mb-2" name="admin_login">
                         <p class="fw-bold">Don't you have an account? <a href="admin_registration.php" >Register</a></p>
                     </div>
                 </form>
